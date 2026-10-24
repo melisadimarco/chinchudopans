@@ -3771,3 +3771,85 @@ input, select, textarea {
         text-align: center;
     }
 }
+
+/* Título sobre las miniaturas */
+.gallery .thumb-caption {
+    position: absolute;
+    inset: auto 0 0;
+    z-index: 2;
+    padding: 1.5rem 1rem 0.75rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+    pointer-events: none;
+}
+
+.gallery .thumb-caption h3 {
+    color: #fff;
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* El texto completo se reserva para la imagen ampliada */
+.gallery .full-caption {
+    display: none;
+}
+
+/* Modal de la galería */
+.gallery .modal .inner {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagen ampliada */
+.gallery .modal .inner > img {
+    display: block;
+    max-width: 100%;
+    max-height: 85vh;
+}
+
+/* Título y párrafo sobre la imagen */
+.gallery .modal-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    padding: 4rem 2rem 1.5rem;
+    color: #fff;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0, 0, 0, 0.45) 35%,
+        rgba(0, 0, 0, 0.85) 100%
+    );
+    text-align: left;
+}
+
+.gallery .modal-caption h2 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.gallery .modal-caption p {
+    color: #fff;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+/* Evitar que el texto se desborde en pantallas pequeñas */
+@media screen and (max-width: 736px) {
+    .gallery .modal-caption {
+        padding: 3rem 1rem 1rem;
+    }
+
+    .gallery .modal-caption h2 {
+        font-size: 1.4rem;
+    }
+
+    .gallery .modal-caption p {
+        font-size: 0.9rem;
+    }
+}
+
+.gallery .modal .inner {
+    display: block;
+}
