@@ -658,6 +658,12 @@
 				// Set src.
 					$modalImg.attr('src', href);
 
+		$modal.find('.modal-caption').html(
+    $a.find('.full-caption').html()
+);
+
+
+
 				// Set visible.
 					$modal.addClass('visible');
 
@@ -736,7 +742,7 @@
 					event.stopPropagation();
 
 			})
-			.prepend('<div class="modal" tabIndex="-1"><div class="inner"><img src="" /></div></div>')
+		.prepend('<div class="modal" tabindex="-1"><div class="inner"><img src="" /><div class="modal-caption"></div></div></div>')
 				.find('img')
 					.on('load', function(event) {
 
